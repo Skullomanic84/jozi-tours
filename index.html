@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Custom Icons -->
+    <link rel="stylesheet" href="./assets/icofont/icofont.min.css">
+
+       <!-- MDB -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet"/>
+
+    <!-- Swiper CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="app.css">
+
+    <title>Jozi Safari | Pride of africa</title>
+</head>
+<body>
+    <!-- header section -->
+    <header>
+        <div class="top-navbar bg-secondary">
+            <div class="container">
+                <div class="top-nav text-white">
+                    <ul>
+                        <li><i class="icofont-ui-dial-phone"></i>+27 11 294 2847</li>
+                        <li><i class="icofont-envelope"></i>info@jozitours.co.za</li>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><i class="icofont-login"></i>Login/Sign-up</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- navbar section -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+           <img src="./assets/logo.png" alt="jozi logo" height='55' loading="lazy" style="margin-right: 15px;"> 
+            <h3>Jozi Tours</h3>  
+        </a>
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+            data-mdb-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="icofont-navigation-menu"></i>
+            </button>
+            <!-- navbar menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Information</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" >Packages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" >Testimony</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" >Contact</a>
+                    </li>
+                </ul>
+            </div>
+    </div>
+</nav>
+        
+    </header>
+    <!-- banner section -->
+    <section id="banner">
+        <!-- Slider main container -->
+            <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide" style="background-image: url(./assets/elephants.jpg);">
+                    <span class="numbers">01</span>
+                    <div class="slide-text">
+                        <h1 class="fw-bolder">Welcome to Jozi Safari</h1>
+                        <p class="color-primary fw-bold">Where everything you see exists together in a delicate balance where nature is the great masterpiece.</p>
+                        <button class="btn btn-lg bg-secondary text-white rounded-0 fw-bold">Book Now</button>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-image: url(./assets/impala.jpg);">
+                    <span class="numbers">02</span>
+                    <div class="slide-text">
+                        <h1 class="fw-bolder">Safari bug</h1>
+                        <p class="color-primary fw-bold">Our safari life makes you forget all your sorrows and feel as if you had drunk half a bottle of champagne.</p>
+                        <button class="btn btn-lg bg-secondary text-white rounded-0 fw-bold">Book Now</button>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-image: url(./assets/lion\ banner.jpg);">
+                    <span class="numbers">03</span>
+                    <div class="slide-text">
+                        <h1 class="fw-bolder">Come Explore</h1>
+                        <p class="color-primary fw-bold">Along within the unspoilt wilderness of a game sanctuary, surrounded on all sides by its confiding animals.</p>
+                        <button class="btn btn-lg bg-secondary text-white rounded-0 fw-bold">Book Now</button>
+                    </div>
+                </div>
+                ...
+            </div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-arrows">
+                <div class="swiper-button-prev">
+                    <span>
+
+                    </span>
+                </div>
+                <div class="swiper-button-next">
+                    <span>
+
+                    </span>
+                </div>
+        </div>
+    </section>
+
+<!-- MDB -->
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+  <!-- Swiper script -->
+  <script>
+  const swiper = new Swiper('.swiper', {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+ 
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+});
+  </script>
+
+</body>
+</html>
