@@ -1,11 +1,16 @@
 /* global variables 
-=================================== */
+===================================== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300&family=Playfair+Display:ital,wght@0,400;0,500;0,800;1,400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Festive&display=swap');
 
 :root {
     --color-primary: #0f0e17;
     --color-secondary: #ff8906;
     --color-headline: #fffffe;
+
+    --backdrop-font: 'Festive',
+    cursive;
 }
 
 *{
@@ -21,13 +26,29 @@ body {
 
 h1,
 h2,
-h3,h4 {
+h3,
+h4,
+h5,
+h6
+ {
     font-family: 'Playfair Display',
     serif;
 }
 
+.sub-heading {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+} 
+
+.about-img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
 /* custom styles
-================================== */
+===================================== */
 .bg-primary {
     background-color: var(--color-primary)!important;
 }
@@ -41,7 +62,7 @@ h3,h4 {
 }
 
 .color-secondary {
-    background-color: var(--color-secondary)!important;
+    color: var(--color-secondary)!important;
 }
 
 .text-white{
@@ -49,7 +70,7 @@ h3,h4 {
 }
 
 /* top navbar
-=================================== */
+===================================== */
 .top-navbar .top-nav{
     display: flex;
     justify-content: space-between;
@@ -80,7 +101,7 @@ h3,h4 {
 }
 
 /* navbar section
-================================= */
+================================= === */
 .navbar {
     font-weight: 400;
     font-family: 'Playfair Display',
@@ -93,7 +114,7 @@ h3,h4 {
 }
 
 /* swiper JS
-================================== */
+===================================== */
 #banner {
     width: 100%;
     height: 100vh;
@@ -130,7 +151,7 @@ h3,h4 {
     right: 15px;
     bottom: 10px;
     font-size: 150px;
-    -webkit-text-stroke: 1px var(--color-secondary);
+    -webkit-text-stroke: 1px var(--color-primary);
     color: transparent;
     font-weight: 800;
     opacity: .5;
@@ -174,8 +195,8 @@ h3,h4 {
 
 .swiper-button-prev span,
 .swiper-button-next span {
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -189,8 +210,8 @@ h3,h4 {
 
 .swiper-button-prev span,
 .swiper-button-next span {
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
 }
 
 .swiper-button-prev:after,
@@ -252,6 +273,265 @@ h3,h4 {
     text-transform: uppercase;
     font-size: 3rem;
 }
+
+/* search section
+===================================== */
+#search {
+    width: 100%;
+    padding: 50px;
+
+}
+
+
+#search .search-option {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#search .search-option .item {
+    align-self: center;
+    padding: 15px 10px;
+    border-right: 1px solid var(--color-secondary);
+}
+
+#search .search-option .item input {
+    border: none;
+    padding: 0!important;
+}
+
+#search .search-option .item input:focus{
+    border: none;
+    box-shadow: none;
+}
+
+#search .search-option .item:nth-child(4) {
+    padding: 0px;
+}
+
+#search .search-option .item:nth-child(4) .btn-theme{
+   padding: 32px 32px;
+   margin: 0!important;
+   background-color: var(--color-secondary);
+   border: none;
+   color: var(--color-headline);
+   box-shadow: none!important;
+   width: 100%;
+   text-align: center;
+}
+
+#search .search-option .item:nth-child(4) .btn-theme i {
+    margin-right: 10px;
+}
+
+/* about section
+===================================== */
+#about {
+    width: 100%;
+    padding: 50px 0;
+}
+
+#about .title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.title-primary {
+    color: var(--color-secondary);
+    font-family: var(--backdrop-font);
+    font-size: 30px;
+    position: relative;
+}
+
+.title .title-primary:before {
+   content: 'About Us'; 
+   position: absolute;
+   top: 100%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   font-size: 120px;
+   color: #000;
+   opacity: .1;
+   z-index: -1;
+}
+
+.title .title-secondary {
+    font-weight: 700;
+    font-size: 55px;
+    letter-spacing: 2px;
+}
+
+/* featured section
+===================================== */
+#feature {
+    width: 100%;
+    padding: 50px 0;
+}
+
+#feature .title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#feature .title .title-primary:before {
+    content: 'Featured';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 120px;
+    color: #000;
+    opacity: .1;
+    z-index: -1;
+}
+
+#feature .card-design {
+    width: 100%;
+}
+
+#feature .card-design .image{
+    position: relative;
+    width: 100%;
+    height: 320px;
+    z-index: -1;
+
+}
+
+#feature .card-design .image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+#feature .card-design .card-text {
+    background-color: var(--color-headline)!important;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    z-index: 9;
+    border-left: 1px solid var(--color-secondary);
+    border-right: 1px solid var(--color-secondary);
+    border-bottom: 1px solid var(--color-secondary);
+}
+
+#feature .card-design .card-text item {
+    align-self: center;
+}
+
+#feature .card-design .card-text item span {
+    font-size: 0.8em;
+}
+
+#feature .card-design .card-text .item span i {
+    color: var(--color-secondary);
+    margin-right: 5px;
+    font-size: 1.8rem;
+}
+
+#feature .card-design .card-text .item button{
+    margin: 0;
+    padding: 10px 15px;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    box-shadow: none;
+}
+
+/* showcase
+===================================== */
+#showcase {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(245, 100, 4, 0.5), rgba(231, 80, 10, 0.5)),
+    url("./assets/hippo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 100px;
+}
+
+/* package section
+===================================== */
+#package .title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#package .title .title-primary:before {
+    content: 'package';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 120px;
+    color: #000;
+    opacity: .1;
+    z-index: -1;
+}
+
+
+
+/* Animation
+===================================== */
+.tracking-in-expand {
+    -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-8-26 20:52:0
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation tracking-in-expand
+ * ----------------------------------------
+ */
+@-webkit-keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
 /* media querries
 ===================================== */
  @media screen and (max-width: 512px){
@@ -266,7 +546,7 @@ h3,h4 {
 
      .navbar-collapse .nav-item {
          border-bottom: 1px dotted var(--color-secondary);
-         margin: 25px;
+         padding: 25px;
      }
 
      .navbar-collapse .nav-item:last-child {
@@ -308,6 +588,21 @@ h3,h4 {
 
       .swiper-button-next span {
           right: 45%;
+      }
+
+      #search .search-option {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+
+      }
+
+      #search .search-option .item {
+          align-self: start;
+          padding: 15px 15px;
+          border: none;
       }
 
 
