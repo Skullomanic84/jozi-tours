@@ -47,6 +47,11 @@ h6
     border-bottom-right-radius: 50px;
 }
 
+i {
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+}
+
 /* custom styles
 ===================================== */
 .bg-primary {
@@ -554,6 +559,28 @@ h6
 .profile-card-4:hover img {
     transform: rotate(5deg) scale(1.1, 1.1);
     filter: brightness(110%);
+}
+
+/* testimony
+===================================== */
+#testimony {
+    margin-top: 100px;
+}
+#testimony .title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#testimony .title .title-primary:before {
+    content: 'the love';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 120px;
+    color: #000;
+    opacity: .1;
+    z-index: -1;
 }
 
 
